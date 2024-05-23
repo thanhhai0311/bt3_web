@@ -1,0 +1,79 @@
+<div class="col-auto col-md-3 col-xl-2 col-2 bg-dark">
+    <div
+        class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+
+        <div class="title">
+            <p>Hệ thống quản lý sinh viên</p>
+        </div>
+        <hr style="border: 2px solid white; min-width: 100%">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+            id="menu" style="min-width: 100%">
+            <li class="nav-item side-item">
+                <a href="home.php" class="nav-link align-middle px-0 text-white">
+                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Trang chủ</span>
+                </a>
+            </li>
+            <li class="nav-item side-item dropdown">
+                <a class="nav-link dropdown-toggle px-0 align-middle text-white" href="#"
+                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fs-4 bi bi-table"></i> <span class="ms-1 d-none d-sm-inline">Lớp</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="class.php">Xem Lớp</a></li>
+                    <li><a class="dropdown-item" href="add_class.php">Thêm Lớp</a></li>
+                    <!-- Các mục dropdown khác có thể thêm vào đây -->
+                </ul>
+            </li>
+
+            <li class="nav-item side-item dropdown">
+                <a class="nav-link dropdown-toggle px-0 align-middle text-white" href="#"
+                    id="navbarDropdownStaff" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fs-4 bi bi-people"></i> <span class="ms-1 d-none d-sm-inline">Sinh
+                        viên</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownStaff">
+                    <li><a class="dropdown-item" href="student.php">Xem Sinh viên</a></li>
+                    <li><a class="dropdown-item" href="add_student.php">Thêm Sinh viên</a></li>
+                    <!-- Các mục dropdown khác có thể thêm vào đây -->
+                </ul>
+            </li>
+
+            <li class="nav-item side-item dropdown">
+                <a class="nav-link dropdown-toggle px-0 align-middle text-white" href="#"
+                    id="navbarDropdownSalary" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fs-4 bi bi-cash-coin"></i> <span
+                        class="ms-1 d-none d-sm-inline">Tiền dịch vụ</span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownSalary">
+                    <li><a class="dropdown-item" href="fee.php">Xem Tiền dịch vụ</a></li>
+                    <li><a class="dropdown-item" href="add_fee.php">Thêm Tiền dịch vụ</a></li>
+                    <!-- Các mục dropdown khác có thể thêm vào đây -->
+                </ul>
+            </li>
+
+            <li class="nav-item side-item">
+                <a href="leave.php" class="nav-link px-0 align-middle text-white">
+                    <i class="fs-4 bi bi-person-x"></i> <span class="ms-1 d-none d-sm-inline ">Nghỉ
+                        Phép</span> </a>
+            </li>
+
+        </ul>
+
+        <hr style="border: 2px solid white; min-width: 100%">
+        <div class="dropdown pb-4">
+            <a href="#"
+                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="admin.png" alt="hugenerd" width="50" height="50"
+                    class="rounded-circle">
+                <span class="d-none d-sm-inline mx-3">Admin</span>
+            </a>
+            <ul class="dropdown-menu text-small shadow"
+                aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
