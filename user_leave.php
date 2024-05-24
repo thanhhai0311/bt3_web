@@ -9,9 +9,15 @@ if (isset($_SESSION['username']) && isset($_SESSION['user_type']) && $_SESSION['
     $query1 = "SELECT * from nghi_phep inner join sinh_vien_tbl on nghi_phep.id_sinhvien=sinh_vien_tbl.id_sv
                                         inner join login_tbl on login_tbl.id = sinh_vien_tbl.id_sv
                                         where username = ?";
-    $query2 = "SELECT * from nghi_phep inner join sinh_vien_tbl on nghi_phep.id_sinhvien=sinh_vien_tbl.id_sv
-                                         inner join login_tbl on login_tbl.id = sinh_vien_tbl.id_sv
-                                         where username = ?";
+    // $query2 = "SELECT * from nghi_phep inner join sinh_vien_tbl on nghi_phep.id_sinhvien=sinh_vien_tbl.id_sv
+    //                                      inner join login_tbl on login_tbl.id = sinh_vien_tbl.id_sv
+    //                                      where username = ?";
+
+    $query2 = "SELECT * FROM tien_dich_vu_tbl
+    INNER JOIN sinh_vien_tbl ON tien_dich_vu_tbl.id_sinhvien = sinh_vien_tbl.id_sv
+    INNER JOIN login_tbl ON login_tbl.id = tien_dich_vu_tbl.id_sinhvien
+    WHERE login_tbl.username = ?";
+    
     $stmt = $con->prepare($query1);
     $stmt->bind_param("s", $_SESSION['username']);
     $stmt->execute();
